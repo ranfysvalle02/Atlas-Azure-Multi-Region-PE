@@ -99,8 +99,11 @@ The application will not be able to connect to the primary shard! It needs to ro
 # Now for the good stuff. Let's see some code in action!
 
 ` export MONGODB_ATLAS_PUBLIC_KEY=yourkeyhere `
+
 ` export MONGODB_ATLAS_PRIVATE_KEY=yourkeyhere `
+
 ` update locals.tf with your values `
+
 
 # Terraform
 - ` terraform init `
