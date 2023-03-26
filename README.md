@@ -1,4 +1,5 @@
-# High Availability + Azure PrivateLink + Multi-Region(Atlas)
+# MongoDB Atlas
+# High Availability + Azure PL + Multi-Region
 ![alt text](https://application-4-gql-predemo-lsfrk.mongodbstitch.com/pe-unsharded.png "Title")
 
 ## Requirements
