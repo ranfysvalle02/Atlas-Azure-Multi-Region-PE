@@ -1,5 +1,4 @@
-# MongoDB Atlas
-# High Availability + Azure PL + Multi-Region
+# High Availability + Azure PrivateLink + Multi-Region(Atlas)
 ![alt text](https://application-4-gql-predemo-lsfrk.mongodbstitch.com/pe-unsharded.png "Title")
 
 ## Requirements
@@ -33,6 +32,10 @@ How exactly do Private Endpoints work for Network Access to MongoDB Atlas?
 
 ## Transitive Peering
 Transitive peering is how we solve for high availability on a Multi-Region cluster.
+
+## What is Peer-to-Peer Transitive Routing?
+In Azure, peer-to-peer transitive routing describes network traffic between two virtual networks that is routed through an intermediate virtual network. For example, assume there are three virtual networks - A, B, and C. A is peered to B, B is peered to C, but A and C are not connected.
+
 ![alt text](https://application-4-gql-predemo-lsfrk.mongodbstitch.com/2.png "Title")
 
 ## PrivateLink + Multi-Region Replicaset Limitations (UNSHARDED)
@@ -94,17 +97,14 @@ The Atlas UI let's you test a full region outage right from the UI!
 ![alt text](https://application-4-gql-predemo-lsfrk.mongodbstitch.com/outage.png "Title")
 
 # What happens if we don't set up transitive peering?
-The application will not be able to connect to the primary shard! It needs to route traffic through VPC peering on the Azure side to the region with the primary node!
+The application will not be able to connect to the primary! It needs to route traffic through VPC peering on the Azure side to the region with the primary node!
 ![alt text](https://application-4-gql-predemo-lsfrk.mongodbstitch.com/outage2.png "Title")
 
 # Now for the good stuff. Let's see some code in action!
 
 ` export MONGODB_ATLAS_PUBLIC_KEY=yourkeyhere `
-
 ` export MONGODB_ATLAS_PRIVATE_KEY=yourkeyhere `
-
 ` update locals.tf with your values `
-
 
 # Terraform
 - ` terraform init `
