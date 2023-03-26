@@ -35,7 +35,7 @@ How exactly do Private Endpoints work for Network Access to MongoDB Atlas?
 Transitive peering is how we solve for high availability on a Multi-Region cluster.
 
 ## What is Peer-to-Peer Transitive Routing?
-![alt text](https://learn.microsoft.com/en-us/azure/virtual-network/media/virtual-networks-peering-overview/local-or-remote-gateway-in-peered-virual-network.png "Title")
+![alt text](https://www.azurecitadel.com/network/concepts/images/lab05-01-diagram.png "Title")
 In Azure, peer-to-peer transitive routing describes network traffic between two virtual networks that is routed through an intermediate virtual network. For example, assume there are three virtual networks - A, B, and C. A is peered to B, B is peered to C, but A and C are not connected.
 
 ![alt text](https://application-4-gql-predemo-lsfrk.mongodbstitch.com/2.png "Title")
